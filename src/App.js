@@ -21,7 +21,7 @@ function App() {
 
    
   const createUser = () => {
-    Axios.post("https://mern-communication.herokuapp.com//api/createUser", {
+    Axios.post("https://mern-communication.herokuapp.com/api/createUser", {
       name,
       age,
       username,
