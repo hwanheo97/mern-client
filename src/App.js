@@ -12,16 +12,16 @@ function App() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    Axios.get("/api/hello").then(response => {console.log(response)})
+    Axios.get("https://mern-communication.herokuapp.com/api/hello").then(response => {console.log(response)})
 
-    Axios.get("/api/getUsers").then((response) => {
+    Axios.get("https://mern-communication.herokuapp.com/api/getUsers").then((response) => {
       setListOfUsers(response.data);
     });
   }, []);
 
    
   const createUser = () => {
-    Axios.post("/api/createUser", {
+    Axios.post("https://mern-communication.herokuapp.com//api/createUser", {
       name,
       age,
       username,
