@@ -2,9 +2,6 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import Axios from "axios";
 
-
-
-
 function App() {
   const [listOfUsers, setListOfUsers] = useState([]);
   const [name, setName] = useState("");
@@ -12,16 +9,15 @@ function App() {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    Axios.get("https://mern-communication.herokuapp.com/api/hello").then(response => {console.log(response)})
+    Axios.get("/api/hello").then(response => {console.log(response)})
 
-    Axios.get("https://mern-communication.herokuapp.com/api/getUsers").then((response) => {
+    Axios.get("/api/getUsers").then((response) => {
       setListOfUsers(response.data);
     });
   }, []);
-
    
   const createUser = () => {
-    Axios.post("https://mern-communication.herokuapp.com/api/createUser", {
+    Axios.post("/api/createUser", {
       name,
       age,
       username,
