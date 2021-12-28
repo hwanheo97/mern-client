@@ -7,7 +7,7 @@ module.exports = function(app) {
     createProxyMiddleware({
      //proxy로 대체 가능 <= { createProxyMiddleware }
      //target: 'http://localhost:5000',    
-    target: 'https://mern-communication.herokuapp.com',   
+    //target: 'https://mern-communication.herokuapp.com',   
 
       changeOrigin: true,
       
